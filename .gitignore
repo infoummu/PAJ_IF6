@@ -13,4 +13,8 @@ _book
 # eBook build output
 *.epub
 *.mobi
-*.pdf
+
+
+.jekyll-cache/
+.sass-cache/
+*.md~
