@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P7
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeEnam 07 - Praktikum 6 :

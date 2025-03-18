@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P9
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeSEMBILAN 09 :

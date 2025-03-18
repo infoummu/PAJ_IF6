@@ -1,6 +1,7 @@
 ---
 title: PAJ Pertemuan 03
 published: true
+author: Ikhwan Elyas
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: PAJ Pertemuan 04
 published: true
+author: Ikhwan Elyas
 ---
 
 

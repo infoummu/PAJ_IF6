@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P5
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeLIMA 05 - Praktikum 4 :

@@ -1,6 +1,7 @@
 ---
 title: Pemrograman Automasi Jaringan
 published: true
+author: Ikhwan Elyas
 ---
 
 

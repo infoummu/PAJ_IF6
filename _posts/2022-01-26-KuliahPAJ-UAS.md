@@ -1,6 +1,7 @@
 ---
 title: Pemrograman Jaringan UAS
 published: true
+author: Ikhwan Elyas
 ---
 
 

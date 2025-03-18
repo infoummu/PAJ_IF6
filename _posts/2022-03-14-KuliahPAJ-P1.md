@@ -1,6 +1,7 @@
 ---
 title: PAJ Pertemuan 01 - 2023
 published: true
+author: Ikhwan Elyas
 ---
 
 ### PEMROGRAMAN dan AUTOMASI JARINGAN (PAJ) - PERTEMUAN PERTAMA 01 :

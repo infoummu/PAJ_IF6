@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P6
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeEnam 06 - Praktikum 5 :

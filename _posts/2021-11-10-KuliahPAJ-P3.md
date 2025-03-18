@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P3
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeTIGA 03 - Praktikum 2:

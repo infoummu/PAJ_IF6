@@ -1,6 +1,7 @@
 ---
 title: PAJ Pertemuan 02
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KEDUA 02 - Praktikkum 1 :

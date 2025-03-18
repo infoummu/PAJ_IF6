@@ -1,6 +1,7 @@
 ---
 title: Kuliah Pemrograman Jaringan P8 UTS
 published: true
+author: Ikhwan Elyas
 ---
 
 ## PERTEMUAN KeDELAPAN 08  - Praktikum 7 - UTS :
