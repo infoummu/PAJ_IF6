@@ -9,7 +9,7 @@ author:
 # Build settings
 # baseurl: /info
 # baseurl: /
-baseurl: /PAJ2023/
+baseurl: /PAJ_IF6/
 # Change this to your relative path (ex: /blog/), or leave just a /
 #markdown: kramdown
 source: .
@@ -28,11 +28,11 @@ defaults:
       layout: "post"
 
 # Plugins
-#gems:
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# gems:
+# plugins:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-seo-tag
 
 # Custom variables
 version: "1.0.0"

@@ -1,6 +1,7 @@
 ---
 title: PAJ Pertemuan 05
 published: true
+author: Ikhwan Elyas
 ---
 
 
