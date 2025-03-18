@@ -72,7 +72,7 @@ Dengan memahami konsep dasar automasi jaringan, manfaat dan tantangannya, serta 
 5. Setelah Jalankan dan Tidak Jika Tidak Ada Error, Silahkan Upload/Kirim 
 6. Masuk ke link ini : [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"} dan BUAT folder dengan nama `PAJ_NPM`
 7. Setelah itu masuk ke folder `PAJ_NPM` yg telah anda buat di [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"}, kemudian UPLOAD hasil praktikum anda. 
-6. Batas Waktu Kumpul sampai sebelum Pertemuan berikutnya masuk 28/03/2022.
+6. Batas Waktu Kumpul sampai sebelum Pertemuan berikutnya masuk 25/03/2025.
 
 ### CODE 
 
