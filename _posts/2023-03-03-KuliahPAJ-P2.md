@@ -35,7 +35,7 @@ published: true
 2. Simpan dengan Beri nama file dengan `praktikum1_ping_NPM.py` (ubah NPM dengan lima digit terakhir npm anda)
 3. Contoh nama file : `praktikum1_ping_19001.py`
 4. Jalankan di CLI, perintahnya : python praktikum1_ping_19020.py
-5. Setelah Jalankan dan Tidak Ada Error, Silahkan Upload/Kirim ke folder `PAJ_NPM` anda yang di [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1NhDmT7-WfwdbZtAZrocFFhLGLN5l1Ko-){:target="_blank"}.
+5. Setelah Jalankan dan Tidak Ada Error, Silahkan Upload/Kirim ke folder `PAJ_NPM` anda yang di [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"}.
 6. Batas Waktu Kumpul sampai sebelum Pertemuan berikutnya masuk 28/03/2022.
 
 ## CODE 
