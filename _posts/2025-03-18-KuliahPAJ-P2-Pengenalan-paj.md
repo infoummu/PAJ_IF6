@@ -33,7 +33,7 @@ Automasi jaringan mengacu pada penggunaan perangkat lunak dan alat untuk mengelo
 
 - **Ketergantungan pada Teknologi:** Ketergantungan yang tinggi pada sistem otomatis dapat menjadi risiko jika terjadi kegagalan sistem atau serangan siber.
 
-# 3. Bahasa Pemrograman yang Umum Digunakan (Python, Bash, Ansible)
+## 3. Bahasa Pemrograman yang Umum Digunakan (Python, Bash, Ansible)
 
 - **Python:** Bahasa pemrograman tingkat tinggi yang populer dalam otomatisasi jaringan karena sintaksnya yang sederhana dan kemampuannya yang luas. Python digunakan untuk membuat skrip yang mengotomatisasi konfigurasi perangkat jaringan, pemantauan, dan tugas-tugas lainnya.
 
