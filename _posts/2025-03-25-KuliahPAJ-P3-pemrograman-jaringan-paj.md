@@ -1,11 +1,11 @@
 ---
-title: PAJ Pertemuan 03 2025 - Dasar Pemrograman Jaringan
+title: PAJ Pertemuan 03 & 04 2025 - Dasar Pemrograman Jaringan
 published: true
 author: Ikhwan Elyas
 description: Automasi jaringan mengacu pada penggunaan perangkat lunak dan alat untuk mengelola jaringan tanpa memerlukan banyak campur tangan manusia. Ini mencakup berbagai tugas, mulai dari konfigurasi perangkat hingga pemantauan jaringan. Dengan mengotomatisasi tugas-tugas ini, organisasi dapat meningkatkan efisiensi operasional, mengurangi kesalahan manusia, dan memastikan konsistensi dalam pengelolaan jaringan.
 ---
 
-## Pertemuan 2: Dasar Pemrograman untuk Jaringan (Python)
+## Pertemuan 03 dan 04: Dasar Pemrograman untuk Jaringan (Python)
 
 **Tujuan Pembelajaran**:
 1. Memahami penggunaan Python untuk automasi jaringan
@@ -14,77 +14,98 @@ description: Automasi jaringan mengacu pada penggunaan perangkat lunak dan alat 
 
 ---
 
-## Istilah yang perlu diketahui : 
+## 1. Istilah yang perlu diketahui: 
 
-### Penjelasan Singkat Socket, Port, TCP, UDP, dan SSH  
-    
-#### 1. **Port**  
-- **Fungsi**:  
-  - Nomor virtual (16-bit, range `0–65535`) yang mengidentifikasi layanan/aplikasi pada perangkat.  
-- **Contoh**:  
-  - `Port 80` → HTTP  
-  - `Port 22` → SSH  
-- **Tujuan**:  
-  - Mengarahkan data ke aplikasi yang sesuai.  
+### Port, TCP, UDP, Socket dan SSH (08/04/2025)
+**Penjelasan Singkat Beberapa Istilah fundamental tools dan protokol dalam jaringan komputer untuk pengiriman data, manajemen koneksi, dan keamanan**
 
-#### 2. **Socket**  
-- **Fungsi**:  
-  - Kombinasi **IP Address + Port** (contoh: `192.168.1.1:80`).  
-- **Peran**:  
-  - Titik akhir (*endpoint*) komunikasi antara dua perangkat.  
+### **1. Port:**
+  **Apa itu?** 
 
-#### 3. **TCP (Transmission Control Protocol)**  
-- **Karakteristik**:  
-  - **Connection-oriented** → Membuat koneksi dulu (*3-way handshake*).  
-  - **Reliable** → Data dikirim berurutan dan di-retransmit jika hilang.  
-  - **Contoh Penggunaan**:  
-    - HTTP (web), SMTP (email), SSH.  
+  Port adalah angka 16-bit (0 hingga 65535) yang digunakan untuk mengidentifikasi proses atau layanan tertentu yang berjalan pada sebuah perangkat jaringan. Fungsinya mirip dengan nomor kamar di sebuah gedung; alamat IP menunjukkan gedungnya, dan nomor port menunjukkan kamar mana yang dituju. Port memungkinkan banyak aplikasi atau layanan yang berbeda untuk berbagi satu koneksi jaringan fisik. Beberapa port sudah dikenal dan digunakan untuk layanan standar (misalnya, port 80 untuk HTTP, port 443 untuk HTTPS).
 
-#### 4. **UDP (User Datagram Protocol)**  
-  - **Karakteristik**:  
-    - **Connectionless** → Tidak ada handshake.  
-    - **Unreliable** → Cepat, tapi tanpa jaminan pengiriman.  
-  - **Contoh Penggunaan**:  
-    - Video streaming, VoIP, DNS.  
+  - Sistem "pintu" virtual di komputer (0-65535)  
+  - Contoh:  
+    - Port 80: HTTP  
+    - Port 22: SSH  
+    - Port 443: HTTPS  
 
-#### 5. **SSH (Secure Shell)**  
-  - **Fungsi**:  
-    - Protokol untuk akses jarak jauh **terenkripsi**.  
-  - **Port Default**:  
-    - `22` (menggunakan TCP).  
-  - **Keamanan**:  
-    - Enkripsi data dan autentikasi aman.  
+  - **Analogi**:  
+  Seperti nomor kamar di hotel, dimana hotel adalah komputer/server
 
 
-- Aplikasi **(SSH)** → Port **(22)** → Socket **(IP:22)** → Protokol **(TCP)** → Jaringan
+### **2. TCP (Transmission Control Protocol):**
+  **Apa itu?** 
+
+  TCP adalah protokol komunikasi yang berorientasi koneksi (*connection-oriented*). Ini berarti sebelum data dikirim, sebuah koneksi harus dibuat terlebih dahulu antara pengirim dan penerima (melalui proses *handshake*). TCP menjamin pengiriman data yang handal dan terurut. Jika ada paket data yang hilang atau tidak berurutan, TCP akan mendeteksi dan mengirimkannya kembali. Ini cocok untuk aplikasi yang membutuhkan keandalan data, seperti transfer file, browsing web (HTTPS), dan email.
+
+### **3. UDP (User Datagram Protocol):**
+  **Apa itu?**
+
+  UDP adalah protokol komunikasi yang tidak berorientasi koneksi (*connectionless*). Data dikirim dalam bentuk datagram tanpa perlu membuat koneksi terlebih dahulu. UDP tidak menjamin pengiriman yang handal atau urutan data. Paket data mungkin hilang atau tiba tidak berurutan. Namun, karena tidak ada overhead untuk membuat dan memelihara koneksi, UDP umumnya lebih cepat daripada TCP. Ini cocok untuk aplikasi yang toleran terhadap kehilangan paket atau yang membutuhkan kecepatan tinggi, seperti streaming video/audio, game online, dan DNS.
+
+* ### **TCP vs UDP**
+
+| **TCP** | **UDP** |
+|---------|---------|
+| Connection-oriented | Connectionless |
+| Reliable (ada ACK) | Unreliable |
+| Contoh: Web, Email | Contoh: Video Stream, DNS |
+
+**Diagram TCP Handshake**:
+
+Client ------------------------ Server
+|---- SYN --------→|
+|←--- SYN-ACK ----|
+|---- ACK -------→|
+
+**Diagram UDP Handshake (NO handshake)**:
+
+Client ------------------------ Server
+|---- Data Packet --------→|
+
+### **4. Socket:**
+**Apa itu?** 
+
+  Secara sederhana, socket adalah *endpoint* dari sebuah koneksi jaringan. Ini merupakan kombinasi dari alamat IP sebuah perangkat dan nomor port tertentu pada perangkat tersebut. Bayangkan seperti stopkontak listrik (IP Address - lokasi perangkat) dan colokan alat elektronik (Port - aplikasi/layanan spesifik di perangkat). Dua socket yang berkomunikasi membentuk sebuah koneksi jaringan.
+ 
+  - Endpoint komunikasi (IP Address + Port + Protocol)  
+  - Interface programming untuk jaringan  
+
+  **Contoh Socket Address**:  
+  `192.168.1.10:80/TCP`
+
+  - **Level Kerja**:
+
+    - A[Aplikasi (HTTP/FTP)] --> B[Socket API]
+    - B --> C[TCP/UDP]
+    - C --> D[IP]
+
+
+### **5. SSH (Secure Shell):**
+**Apa itu?** 
+
+  SSH adalah protokol jaringan yang aman yang digunakan untuk membuat koneksi terenkripsi antara klien dan server. Ini sering digunakan untuk mengakses dan mengelola perangkat jaringan (seperti server, router, dan switch) dari jarak jauh melalui *command-line interface* (CLI). SSH mengenkripsi semua komunikasi, termasuk *username*, *password*, dan perintah yang diketik, sehingga mencegah *eavesdropping* dan serangan *man-in-the-middle*. SSH secara default menggunakan port TCP 22.
+
+- **SSH adalah Protokol yang menggunakan:**
+  - TCP Port 22
+  - Socket untuk komunikasi
+  - Enkripsi untuk keamanan
+
+- **Arsitektur SSH:**
+  - Client Socket (Random Port) → TCP Connection → Server Socket (Port 22)
+
+- **The Flow:**
+  - Aplikasi **(SSH)** → Port **(22)** → Socket **(IP:22)** → Protokol **(TCP)** → Jaringan
+
+  * **Alur Komunikasi:** Sebuah aplikasi (misalnya, klien SSH) akan membuat socket dengan alamat IP lokalnya dan port yang dipilih secara acak (port ephemeral). Aplikasi ini kemudian akan mencoba membuat koneksi ke socket server (alamat IP server dan port SSH 22) menggunakan protokol TCP.
+
 
 ---
- 
 
-### 1. Review Python Dasar
+## 2. Python dan Library untuk Jaringan: 
 
-#### Penjelasan
-Sebelum masuk ke automasi jaringan, perlu memahami sintaks Python dasar:
-
-- **Variabel & Tipe Data**: String, integer, list, dictionary
-- **Struktur Kontrol**: `if-else`, `for/while` loop
-- **Fungsi**: Definisikan fungsi untuk modularitas kode
-- **File Handling**: Membaca/menulis file (e.g., konfigurasi jaringan)
-
-#### Contoh Kode
-
-```python
-# Fungsi menghitung subnet
-def calculate_subnet(ip, prefix):
-    import ipaddress
-    network = ipaddress.IPv4Network(f"{ip}/{prefix}", strict=False)
-    return str(network.network_address)
-```
-
-## 2. Library Jaringan Python
-
-### Penjelasan
-Python memiliki library khusus untuk berinteraksi dengan perangkat jaringan:
+Python memiliki beberapa library khusus untuk berinteraksi dengan perangkat jaringan, diataranya:
 
 - **`socket`**: Untuk komunikasi low-level (TCP/UDP)
 - **`paramiko`**: Implementasi SSHv2 (remote login, command execution)
@@ -101,7 +122,7 @@ Python memiliki library khusus untuk berinteraksi dengan perangkat jaringan:
 | Membutuhkan lebih banyak kode boilerplate | Menyederhanakan operasi jaringan umum |
 | Support SSH exec dan shell channel | Menambahkan abstraksi vendor-specific |
 
-**Kapan menggunakan yang mana?**
+### **Kapan menggunakan yang mana?**
 - Gunakan `paramiko` ketika:
   - Membutuhkan kontrol penuh atas SSH connection
   - Bekerja dengan protokol non-standard
@@ -112,33 +133,38 @@ Python memiliki library khusus untuk berinteraksi dengan perangkat jaringan:
   - Membutuhkan implementasi cepat automasi jaringan
   - Ingin menghindari parsing output manual
 
+### Documentation/Wiki Source:
+- **Paramiko Docs/Wiki** --> [www.paramiko.org](https://www.paramiko.org/){:target="_blank"}
+- **Netmiko Docs/Wiki** --> [github.io/netmiko/docs/netmiko](https://ktbyers.github.io/netmiko/docs/netmiko/index.html){:target="_blank"}
+
+---
+
 ## 3. Membuat Koneksi SSH Sederhana
+  Langkah-langkah koneksi SSH dengan `paramiko`:
 
-### Penjelasan
-Langkah-langkah koneksi SSH dengan `paramiko`:
+  1. **Buat instance `SSHClient`**
+    - Inisialisasi objek client SSH
+    - Atur kebijakan host key (auto-approve untuk lab)
 
-1. **Buat instance `SSHClient`**
-   - Inisialisasi objek client SSH
-   - Atur kebijakan host key (auto-approve untuk lab)
+  2. **Hubungkan ke perangkat**
+    - Gunakan metode `connect()`
+    - Butuh parameter:
+      - Alamat IP/hostname
+      - Username
+      - Password
+      - Port (default 22)
 
-2. **Hubungkan ke perangkat**
-   - Gunakan metode `connect()`
-   - Butuh parameter:
-     - Alamat IP/hostname
-     - Username
-     - Password
-     - Port (default 22)
+  3. **Eksekusi command**
+    - Gunakan `exec_command()` untuk perintah tunggal
+    - Untuk session interaktif, gunakan `invoke_shell()`
+    - Tangkap output stdout/stderr
 
-3. **Eksekusi command**
-   - Gunakan `exec_command()` untuk perintah tunggal
-   - Untuk session interaktif, gunakan `invoke_shell()`
-   - Tangkap output stdout/stderr
+  4. **Tutup koneksi**
+    - Selalu tutup koneksi di blok `finally`
+    - Hindari connection leak
 
-4. **Tutup koneksi**
-   - Selalu tutup koneksi di blok `finally`
-   - Hindari connection leak
 
-## 4. Contoh Script Paramiko:
+* ### **1. Contoh Script SSH dan Paramiko:**
 
 ```python
 import paramiko
@@ -173,28 +199,110 @@ finally:
 - **exec_command():** Mengirim command ke perangkat.
 - **stdout.read():** Membaca output perangkat.
 
-## 5. Optimasi dengan netmiko
-**Penjelasan:**
-`netmiko` menyederhanakan koneksi multi-vendor. Contoh untuk Cisco IOS:
+* ### **2. Contoh Lain SSH dan Paramiko script:**
+
+```python
+import paramiko
+import time
+
+# MikroTik device details
+host = '192.168.88.1'      # MikroTik IP address
+username = 'admin'         # Default username
+password = ''              # Default password (blank)
+port = 22                  # SSH port
+
+# Simple test commands (read-only)
+commands = [
+    '/system identity print',
+    '/ip address print',
+    '/interface print brief',
+    '/system resource print'
+]
+
+# Create SSH client
+client = paramiko.SSHClient()
+client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+try:
+    # Connect to device
+    print(f"Connecting to {host}...")
+    client.connect(host, port=port, username=username, password=password, look_for_keys=False)
+    print("Connected successfully!\n")
+    
+    # Create interactive shell
+    shell = client.invoke_shell()
+    
+    # Send commands and get output
+    for cmd in commands:
+        print(f"Executing: {cmd}")
+        shell.send(cmd + '\n')
+        time.sleep(1)  # Wait for command to execute
+        
+        # Read output
+        output = ''
+        while shell.recv_ready():
+            output += shell.recv(4096).decode('utf-8')
+            time.sleep(0.1)
+        
+        # Clean and print output
+        clean_output = output.split('\r\n', 1)[-1]  # Remove command echo
+        print(clean_output)
+        print("-" * 50)  # Separator line
+
+except paramiko.AuthenticationException:
+    print("Authentication failed, please verify credentials")
+except paramiko.SSHException as e:
+    print(f"SSH error: {str(e)}")
+except Exception as e:
+    print(f"Error: {str(e)}")
+finally:
+    # Close connection
+    if client:
+        client.close()
+    print("\nDisconnected from device")
+```
+
+
+* ### **3. Contoh Script SSH dan netmiko:**
+  `netmiko` menyederhanakan koneksi multi-vendor. Contoh untuk mikrotik device:
 
 ```python
 from netmiko import ConnectHandler
 
-device = {
-    "device_type": "cisco_ios",
-    "host": "192.168.1.1",
-    "username": "admin",
-    "password": "password123",
+# MikroTik device configuration
+mikrotik = {
+    'device_type': 'mikrotik_routeros',
+    'host': '192.168.88.1',    # Replace with your MikroTik IP
+    'username': 'admin',       # Default is 'admin'
+    'password': '',            # Default password is blank
+    'port': 22,                # SSH port
 }
 
+# Simple test commands (read-only)
+test_commands = [
+    '/system identity print',          # Show device name
+    '/ip address print',               # List all IP addresses
+    '/interface print where type=ether',  # Show only Ethernet interfaces
+    '/system resource print'           # Show CPU/RAM usage
+]
+
 try:
-    # Koneksi dan eksekusi command
-    with ConnectHandler(**device) as conn:
-        output = conn.send_command("show ip interface brief")
-        print(output)
+    # Connect to device
+    print(f"Connecting to {mikrotik['host']}...")
+    with ConnectHandler(**mikrotik) as connection:
+        print("Connection successful!\n")
         
+        # Execute each test command
+        for cmd in test_commands:
+            print(f"Executing: {cmd}")
+            output = connection.send_command(cmd)
+            print(output)
+            print("-" * 50)  # Separator line
+            
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"Error: {str(e)}")
+finally:
+    print("\nTest completed.")
 ```
 
 **Keunggulan netmiko:**
@@ -202,9 +310,8 @@ except Exception as e:
 - Mendukung send_config_set() untuk konfigurasi multi-line.
 
 
-## 6. Penggunaan Library Socket Python
+* ### **4. Contoh Socket TCP Client Sederhana Python:***
 
-### 1. TCP Client Sederhana
 ```python
 import socket
 
@@ -231,8 +338,10 @@ finally:
 
 ```
 
-### 2. UDP Client/Server Sederhana
-Server UDP:
+* ### **4. Contoh UDP Client/Server Sederhana:**
+
+  * **Server UDP:**
+
 ```python
 import socket
 
@@ -249,7 +358,7 @@ while True:
     udp_server.sendto(b"Message received", addr)
 ```
 
-Client UDP:
+  * **Client UDP:**
 
 ```python
 import socket
@@ -270,18 +379,16 @@ finally:
 
 **Catatan Penting:**
 
-TCP vs UDP:
-   - TCP (SOCK_STREAM): Handshake, reliable, ordered
-   - UDP (SOCK_DGRAM): Connectionless, faster, no guarantee
+### Kerjakan Latihan Praktikum ke 3
 
-Port yang umum:
-   - 80 (HTTP), 443 (HTTPS)
-   - 22 (SSH), 53 (DNS)
-
-Keamanan:
-- Raw socket (ICMP) memerlukan privilege admin
-- Selalu gunakan try-finally untuk close socket
-- Gunakan timeout untuk menghindari blocking
+1. Tulis Code diatas dengan Aplikasi Editor 
+2. Simpan dengan Beri nama file dengan `praktikum3_ssh_paramiko/netmiko/socket_NPM.py` (ubah NPM dengan lima digit terakhir npm anda)
+3. Contoh nama file : `praktikum2_ssh_netmiko_22001.py`
+4. Jalankan di CLI, perintahnya : python praktikum2_ssh_netmiko_22020.py
+5. Setelah Jalankan dan Tidak Jika Tidak Ada Error, Silahkan Upload/Kirim 
+6. Masuk ke link ini : [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"} dan BUAT folder dengan nama `PAJ_NPM`
+7. Setelah itu masuk ke folder `PAJ_NPM` yg telah anda buat di [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"}, kemudian UPLOAD hasil praktikum anda. 
+6. Batas Waktu Kumpul sampai sebelum Pertemuan berikutnya masuk 25/03/2025.
 
 ***
 by: ikhwan@fedora.linux 
