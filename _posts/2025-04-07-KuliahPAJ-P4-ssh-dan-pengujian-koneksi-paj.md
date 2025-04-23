@@ -93,14 +93,44 @@ finally:
 
 ```
 
+* ### **Ping ke Multiple Host: (kumpul)**
+
+    - Buat Kode anda untuk ping ke Multiple Host (banyak host) sekaligus, berikut contoh kode yang saya buat, silahkan buat versi anda masing-masing !.
+
+```python
+import os
+
+def ping_host(host):
+    # Using the ping command with -n 4 (4 pings) and -w 1000 (1 second timeout)
+    response = os.system(f"ping -n 4 -w 1000 {host} > nul 2>&1")
+    
+    if response == 0:
+        return "Connected"
+    else:
+        return "Not connected"
+
+# Example usage
+
+HOSTs = ["192.168.16.1",
+        "192.168.16.2",
+        "192.168.16.3",
+        "192.168.16.4",
+        "192.168.16.5",
+        "192.168.16.6"]
+for host in HOSTs:
+    # host = "192.168.16.3"  # You can change this to any host or IP address
+    result = ping_host(host)
+    print(f"Status for {host}: {result}")
+```
+
 **Catatan Penting:**
 
 ### Kerjakan Latihan Praktikum ke 4
 
 1. Tulis Code diatas dengan Aplikasi Editor 
-2. Simpan dengan Beri nama file dengan `praktikum4_ssh_paramiko/netmiko/socket_NPM.py` (ubah NPM dengan lima digit terakhir npm anda)
-3. Contoh nama file : `praktikum4_ssh_netmiko_22001.py`
-4. Jalankan di CLI, perintahnya : python praktikum4_ssh_netmiko_22020.py
+2. Simpan dengan Beri nama file dengan `praktikum4_ping_MH_NPM.py` (ubah NPM dengan lima digit terakhir npm anda)
+3. Contoh nama file : `praktikum4_ping_MH_22001.py`
+4. Jalankan di CLI, perintahnya : python praktikum4_ping_MH_22020.py
 5. Setelah Jalankan dan Tidak Jika Tidak Ada Error, Silahkan Upload/Kirim 
 6. Masuk ke link ini : [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"} dan BUAT folder dengan nama `PAJ_NPM`
 7. Setelah itu masuk ke folder `PAJ_NPM` yg telah anda buat di [GDRIVE (Google Drive)](https://drive.google.com/drive/folders/1aekuG1Nf9gNFl3vfIVfq-GQcS47r3qvJ?usp=sharing){:target="_blank"}, kemudian UPLOAD hasil praktikum anda. 
