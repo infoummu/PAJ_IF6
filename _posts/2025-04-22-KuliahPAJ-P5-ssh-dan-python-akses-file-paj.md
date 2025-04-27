@@ -13,6 +13,7 @@ description: Menggunakan SSH untuk mengakses file di komputer yang di remote sec
     - ping 
     - ifconfig 
     - ip addr (dst)
+    - nmap
     - ssh
     - whoami 
     - pwd
@@ -21,6 +22,23 @@ description: Menggunakan SSH untuk mengakses file di komputer yang di remote sec
     - cd
     - ls 
     - cat 
+
+
+| Perintah    | Keterangan                                                                 |
+|-------------|----------------------------------------------------------------------------|
+| `ping`      | Mengirim paket ICMP untuk menguji konektivitas jaringan ke host tertentu. |
+| `ifconfig`  | Menampilkan atau mengkonfigurasi pengaturan jaringan (umumnya pada sistem lama). |
+| `ip addr`   | Menampilkan informasi alamat IP dari semua antarmuka jaringan.            |
+| `nmap`      | Alat pemindaian jaringan untuk mendeteksi host dan layanan terbuka.       |
+| `ssh`       | Mengakses komputer lain secara remote dengan aman melalui protokol SSH.   |
+| `whoami`    | Menampilkan nama pengguna saat ini yang sedang login.                     |
+| `pwd`       | Menampilkan direktori kerja saat ini (print working directory).           |
+| `touch`     | Membuat file kosong baru atau memperbarui waktu akses file.               |
+| `nano`      | Editor teks berbasis terminal yang sederhana dan mudah digunakan.         |
+| `cd`        | Mengubah direktori kerja saat ini.                                        |
+| `ls`        | Menampilkan daftar file dan direktori dalam direktori saat ini.           |
+| `cat`       | Menampilkan isi file ke layar, bisa juga untuk menggabungkan file.        |
+
 
 ### Automation dengan code python
 
