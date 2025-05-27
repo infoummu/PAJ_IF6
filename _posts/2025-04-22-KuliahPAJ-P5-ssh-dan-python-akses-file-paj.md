@@ -85,8 +85,6 @@ lihatfile("fachrul")
 
 ```
 
-
-
 ### Kerjakan Latihan Praktikum ke 5
 
 1. Tulis Code diatas dengan Aplikasi Editor 
