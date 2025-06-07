@@ -1,5 +1,5 @@
 ---
-title: PAJ Pertemuan 06 2025 - SSH online (linux exp)
+title: PAJ Pertemuan 06 2025 - SSH online Server (linux exp)
 published: true
 author: Ikhwan Elyas
 description: Menggunakan SSH untuk mengakses file di komputer yang di remote secara manual dan menggunakan coding Python (Netmiko/Paramiko). Langkah ini mengisolasi masalah jaringan dari potensi kesalahan kode, mempercepat debugging, dan memastikan fondasi yang benar sebelum automasi.

@@ -1,5 +1,5 @@
 ---
-title: PAJ Pertemuan 07 2025 - FTP online (linux exp)
+title: PAJ Pertemuan 07 2025 - FTP online Server (linux exp)
 published: true
 author: Ikhwan Elyas
 description: FTP (File Transfer Protocol) adalah protokol jaringan untuk transfer file antara client dan server melalui port 21 (FTP), 22 (SFTP), atau 990 (FTPS). Digunakan untuk upload, download, dan manajemen file di server remote. FTP dasar tidak terenkripsi, sedangkan SFTP/FTPS lebih aman dengan enkripsi. Contoh tools FileZilla (GUI) dan library Python (ftplib, paramiko).
