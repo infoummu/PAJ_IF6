@@ -17,18 +17,22 @@ description: Mata kuliah ini membahas dasar pemrograman untuk mengotomasi konfig
 
 * PAJ = Pemrograman dan Automasi Jaringan
 
+## Jaringan Internet di tempat saya agak JELEK, jadi kalau TERPUTUS silahkan MASUK LAGI
+
 ## Variabel dan Persentase Penilaian :
 - Absen  : 40 %
     - Absen Untuk Pertemuan Online dihitung berdasarkan yang mengumpulkan file praktikum
-- Tugas  : 40 %
+- Tugas  : 40 % * nanti ada perbaikan poin ini, hanya yang masuk yang akan di pertimbangkan tugasnya 
     - Tugas yang AKAN DINILAI adalah tugas yang dikerjakan dan dikumpulkan SESUAI DENGAN KETENTUAN,
     - Setiap tugas akan disampaikan ketentuan apa saja yang harus dipenuhi, dari format penulisan sampai dengan ketentuan pengumpulan tugas
     - Umumnya ketentuan yang harus selalu diperhatikan adalah ISI TUGAS, BATAS WAKTU PENGUMPULAN TUGAS dan PENAMAAN FILE TUGAS, serta FORMAT atau TEMPLATE TUGAS.
 - UTS dan UAS : 20 % (UTS 10% dan UAS 10%)
+    - Tidak Ada Remedial, karna persentasi UAS hanya 10 %, (jadi tidak ngaruh nila walaupun ikut remedial)
 
 
 
 ## Persiapkan Sebelum Praktikum PAJ :
+## Ini Catatan Untuk Dipersiapkan Untuk LAPTOP Masing2
 <a name="pertama"></a>
 
 1. Untuk MK PAJ, bahasa pemrograman yang akan digunakan adalah python, VERSI python adalah `python 7.4.x` dan beberapa Aplikasi yang akan digunakan bisa dilihat di [Download](downloads#master){:target="_blank"} sudah HARUS TERINSTALL, serta SIAPKAN Aplikasi EDITOR Favorit anda (Visual Studio Code, Sublime Text, Atom, Notepad++) di LAPTOP anda Masing-masing (Sudah Terinstall dan siap pakai).
