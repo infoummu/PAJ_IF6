@@ -44,6 +44,48 @@ Jalankan perintah berikut di terminal/command prompt:
 pip install paramiko
 pip install python-nmap   # untuk nmap dari Python (opsional)
 ```
+
+
+
+## Bagian 0: KONFIGURASI ONLINE/OFFLINE
+
+### Yang OFFLINE 
+```bash
+http://192.168.4.1:4000/PAJ_IF6/
+
+tool: ssh
+user : infra
+pass : infra
+host/ip : 192.168.4.1 
+port : 2222
+
+# PERINTAH BAWAAN : 
+ssh infra@192.168.4.1
+# PERINTAH DENGAN PORT BERBEDA: 
+ssh infra@192.168.4.1 -p 2222
+```
+
+### Yang ONLINE 
+```bash
+ONLINE MATERI : 
+https://infoummu.github.io/PAJ_IF6/
+
+tool: ssh
+user : bandit0
+pass : bandit0
+host/ip : overthewire.org / bandit.labs.overthewire.org 
+port : 2220
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+# PERINTAH BAWAAN : 
+ssh bandit0@bandit.labs.overthewire.org
+# PERINTAH DENGAN PORT BERBEDA: 
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+```
+
+
 ## Bagian 1: Praktikum Manual
 Tujuan: Memastikan konektivitas dasar dan memahami perintah manual sebelum otomasi.
 
@@ -328,6 +370,7 @@ def backup_remote_file(host, user, pwd, remote_path, local_folder="./backup"):
     # Implementasikan sendiri
     pass
 ```
+
 
 
 ---
