@@ -19,3 +19,6 @@ _book
 .sass-cache/
 *.md~
 _site
+tmp/*
+./tmp
+./tmp/*

@@ -1,0 +1,6 @@
+---
+title: <title/judul> 
+author: Ikhwan N. Elyas
+published: true
+description: <deskripsi materi dalam 40 kata>
+---

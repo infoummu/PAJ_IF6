@@ -3,7 +3,6 @@ title: PAJ Pertemuan 06 - SSH Automation dengan Paramiko
 published: true
 author: Ikhwan Elyas
 description: Materi praktikum ini membahas otomasi SSH menggunakan library Paramiko di Python. Mencakup dasar-dasar SSH, pengecekan konektivitas dengan ping dan nmap secara manual. Kemudian, diimplementasikan script Python untuk eksekusi perintah remote, sesi interaktif, dan transfer file. Juga disertakan studi kasus untuk backup konfigurasi server jarak jauh secara terprogram, meningkatkan efisiensi administrasi sistem.
-
 ---
 
 ## Tujuan Praktikum
